@@ -24,7 +24,7 @@ public class App {
     }
 
     public static void setCheckingAccount(Client client) {
-      CheckingAccount checkAccount = new CheckingAccount("checking agency", "123", client, 100);
+      CheckingAccount checkAccount = new CheckingAccount("checking agency", "123", client, 100, 11);
       System.out.println("\nWelcome to the checking section!\n");
 
       checkAccount.setAccountTax();
@@ -34,7 +34,7 @@ public class App {
     }
 
     public static void setSavingAccount(Client client) {
-      SavingAccount savingAccount = new SavingAccount("saving agency", "321", client, 100);
+      SavingAccount savingAccount = new SavingAccount("saving agency", "321", client, 100, 1.5);
       System.out.println("\nWelcome to saving the section!\n");
 
       savingAccount.setAccountBirthday();
@@ -55,10 +55,14 @@ public class App {
               System.out.print("Value to deposit: ");
               
                checkingAccount.deposit(scanner.nextDouble());
+               TaxControl.registerOperation(checkingAccount);
+               TaxControl.getSum();
            } else if (choice == 3) {
               System.out.print("Value to takeout: ");
               
                checkingAccount.takeout(scanner.nextDouble());
+               TaxControl.registerOperation(checkingAccount);
+               TaxControl.getSum();
            } else if (choice == 4) {
               System.out.print("Exiting system...");
               
@@ -82,10 +86,14 @@ public class App {
               System.out.print("Value to deposit: ");
               
                savingAccount.deposit(scanner.nextDouble());
+               TaxControl.registerOperation(savingAccount);
+               TaxControl.getSum();
            } else if (choice == 3) {
               System.out.print("Value to takeout: ");
               
                savingAccount.takeout(scanner.nextDouble());
+               TaxControl.registerOperation(savingAccount);
+               TaxControl.getSum();
            } else if (choice == 4) {
               System.out.print("Exiting system...");
               

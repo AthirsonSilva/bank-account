@@ -3,6 +3,7 @@ public abstract class Account {
     protected String accountAgency;
     protected double accountBalance;
     protected Client client;
+    protected double tax;
 
     public Account(String accountAgency, String accountNumber, Client client, double accountBalance) {
         this.accountNumber = accountNumber;
@@ -22,6 +23,10 @@ public abstract class Account {
     public void setAccountAgency(String accountAgency) {
         this.accountAgency = accountAgency;
     }
+
+    public void setAccountTax(double tax) {
+        this.tax = tax;
+    }
     
     public String getAccountNumber() {
         return accountNumber;
@@ -35,6 +40,10 @@ public abstract class Account {
         return accountBalance;
     }
 
+    public void getAccounTax() {
+        return this.tax;
+    }
+    
     public abstract boolean deposit(double value);
 
     public abstract boolean takeout(double value);
