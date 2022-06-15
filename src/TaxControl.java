@@ -1,10 +1,9 @@
 public class TaxControl {
     private static double sum;
 
-    public static void registerOperation(Account account) {
-        double tax = account.getAccountTax();
+    public static void registerOperation(CheckingAccount checkingAccount) {
+        double tax = checkingAccount.getAccountTax();
         TaxControl.sum = TaxControl.sum + tax;
-    }
 
     public public static double getSum() {
         return this.sum;
