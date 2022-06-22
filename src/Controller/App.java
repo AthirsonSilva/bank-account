@@ -1,5 +1,6 @@
 package Controller;
 import java.util.Scanner;
+import Model.*;
 
 public class App {
     private static Scanner scanner = new Scanner(System.in);

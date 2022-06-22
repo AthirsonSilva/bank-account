@@ -3,6 +3,7 @@ import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -35,7 +36,7 @@ public class ClientView extends JFrame {
 		container.add(labelName);
 		
 		textName = new JTextField();
-		textName.setBounds(300, 50, 200, 30);pp
+		textName.setBounds(300, 50, 200, 30);
 		container.add(textName);
 		
 		labelCpf = new JLabel();
@@ -63,7 +64,7 @@ public class ClientView extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "Additional button"
+				JOptionPane.showMessageDialog(null, "User's info: "
         				+ "\nClient's name: " + textName.getText()
         				+ "\nClient's cpf: " + textCpf.getText()
         				+ "\nClient's email: " + textEmail.getText());
